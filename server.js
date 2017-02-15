@@ -28,10 +28,14 @@ function setWarmth(level, zone) {
 
 app.get('/on/:zone', function(req, res) {
 	sendCommand('on', req.params.zone);
+	sendCommand('on', req.params.zone);
+	sendCommand('on', req.params.zone);
 	res.send(true);
 });
 
 app.get('/off/:zone', function(req, res) {
+	sendCommand('off', req.params.zone);
+	sendCommand('off', req.params.zone);
 	sendCommand('off', req.params.zone);
 	res.send(true);
 });
